@@ -5,7 +5,7 @@ TUNNEL_PORT=''
 TUNNEL_HOST=''
 SSH_PID=`pgrep -x ssh`
 WLAN_ACTIVE=`route | grep 'wlan0' | grep 'G'`
-SOCKS_OFF=`cat /etc/privoxy/config | grep $SOCKS_PORT | grep '#'`
+SOCKS_OFF=`cat /etc/privoxy/config | grep $TUNNEL_PORT | grep '#'`
 
 if [ -n "$WLAN_ACTIVE" ]; then
  echo "wlan0 is active!"
